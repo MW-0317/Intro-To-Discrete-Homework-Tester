@@ -1,6 +1,9 @@
+# This Python script was used in order to help me solve the various homework solutions for homework 8 in Arup Guha's Intro to Discrete Course
+
 import random
 N = 1000000
 
+# Question 5: Arriving around 0.658...
 def q5():
   r_count = 0
   n = N
@@ -20,25 +23,16 @@ def q5():
 
   print(r_count / n)
 
-
-
 # Question 6: Arriving around 0.466... as the answer
 def q6():
   r_count = 0
   n = N
   for i in range(0, n):
-    # set_a = []
-    # set_b = []
-    # both_ = [set_a,set_b]
-  
-    # for i in range(1,16):
-    #   random.choice(both_).append(i)
     all_n = list(range(1, 16))
     random.shuffle(all_n)
     set_a = all_n[0:8]
-    # print(set_a)
     set_b = all_n[8:16]
-    # print(set_b)
+    
     r_count += ((1 in set_a and 2 in set_a) or (1 in set_b and 2 in set_b))
   
   print(r_count / n)
